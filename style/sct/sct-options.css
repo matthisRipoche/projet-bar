@@ -1,0 +1,9 @@
+.sct-options{
+margin-top: 20px;
+}
+
+.sct-options .wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

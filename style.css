@@ -1,0 +1,14 @@
+@import url('style/variables.css');
+@import url('style/base.css');
+@import url('style/header.css');
+
+/* import fichier de section */
+@import url('style/sct/sct-options.css');
+
+
+/* import fichier de page */
+@import url('style/page-boisson.css');
+@import url('style/page-table.css');
+
+
+@import url('style/footer.css');
