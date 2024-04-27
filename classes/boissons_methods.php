@@ -1,5 +1,4 @@
 <?php
-include_once('classes/boisson.php');
 
 class Boissons_metods
 {

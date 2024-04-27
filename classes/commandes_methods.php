@@ -1,7 +1,6 @@
 <?php
-include_once('classes/commande.php');
 
-class Commands_methods
+class Commandes_methods
 {
     public array $commandes = [];
 

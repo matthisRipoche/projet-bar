@@ -1,10 +1,10 @@
 <?php
-
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-
-include_once('header.php'); ?>
+include_once('classe-include.php');
+include_once('header.php');
+?>
 
 <main class="site-main">
     <?php

@@ -1,9 +1,3 @@
-<?php
-include_once('classes/boissons_methods.php');
-
-$objetBoissons = new Boissons_metods;
-?>
-
 <div class="page-boisson">
     <h1>BOISSON</h1>
 
