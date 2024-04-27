@@ -1,18 +1,25 @@
 <?php
 class Boisson
 {
+    private $id;
     private $name;
     private $description;
     private $prix;
 
-    public function __construct($name, $description, $prix)
+    public function __construct($id, $data)
     {
-        $this->name = $name;
-        $this->description = $description;
-        $this->prix = $prix;
+        $this->id = $id;
+        $this->name = $data['name'];
+        $this->description = $data['description'];
+        $this->prix = $data['prix'];
     }
 
     //getters
+    public function getID()
+    {
+        return $this->id;
+    }
+
     public function getName()
     {
         return $this->name;
@@ -29,6 +36,11 @@ class Boisson
     }
 
     //setters
+    public function setID($newID)
+    {
+        $this->id = $newID;
+    }
+
     public function setName($newName)
     {
         $this->name = $newName;

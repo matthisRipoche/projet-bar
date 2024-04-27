@@ -1,12 +1,17 @@
-<?php include_once('header.php'); ?>
+<?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+
+include_once('header.php'); ?>
 
 <main class="site-main">
     <?php
     include_once('templates/parts/options.php');
 
-    if (isset($_GET['option'])) {
-        $option = $_GET['option'];
-        switch ($option) {
+    if (isset($_GET['nav'])) {
+        switch ($_GET['nav']) {
             case 1:
                 include_once('templates/page-boisson.php');
                 break;
