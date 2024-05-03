@@ -3,6 +3,5 @@
 
     <?php
     include_once('templates/parts/commande-create.php');
-    dump($_POST);
     ?>
 </div>

@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+include_once('functions.php');
 include_once('classe-include.php');
 include_once('header.php');
 ?>

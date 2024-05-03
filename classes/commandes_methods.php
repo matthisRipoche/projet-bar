@@ -3,11 +3,13 @@
 class Commandes_methods
 {
     public array $commandes = [];
+    private $objetBoissons;
 
-    public function __construct()
+    public function __construct($objetBoissons)
     {
+        $this->objetBoissons = $objetBoissons;
         $this->InitCommandes();
-
+        $this->FormProcess();
         $this->SaveCommandes();
     }
 
@@ -21,6 +23,28 @@ class Commandes_methods
 
                 $this->commandes[] = $newCommande;
             }
+        }
+    }
+
+    private function AddCommande()
+    {
+        foreach ($this->commandes as $commande) {
+        }
+
+        foreach ($this->objetBoissons->boissons as $boisson) {
+            if (isset($_POST["boissons-selected" . $boisson->getID()])) {
+                $boissonSelected['boissons-selected' . $boisson->getID()] = $boisson->getName();
+            }
+        }
+
+        if (isset($_POST['commande-create'])) {
+        }
+    }
+
+    private function FormProcess()
+    {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $this->AddCommande();
         }
     }
 

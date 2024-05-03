@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    <?php include_once('functions.php'); ?>
     <header class="site-header">
         <h1>GESTIONNAIRE DE BAR</h1>
     </header>
