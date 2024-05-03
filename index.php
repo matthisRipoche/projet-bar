@@ -14,17 +14,17 @@ include_once('header.php');
     if (isset($_GET['nav'])) {
         switch ($_GET['nav']) {
             case 1:
-                include_once('templates/page-boisson.php');
+                include_once('templates/pages/page-boisson.php');
                 break;
             case 2:
-                include_once('templates/page-table.php');
+                include_once('templates/pages/page-table.php');
                 break;
             case 3:
-                include_once('templates/page-commande.php');
+                include_once('templates/pages/page-commande.php');
                 break;
         }
     } else {
-        include_once('templates/page-accueil.php');
+        include_once('templates/pages/page-accueil.php');
     }
     ?>
 </main>

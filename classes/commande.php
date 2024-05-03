@@ -1,7 +1,7 @@
 <?php
 class Commande
 {
-    private int $id;
+    private $id;
     private array $listeBoisson = [];
     private int $prix;
     private string $date;

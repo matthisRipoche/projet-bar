@@ -1,6 +1,6 @@
 <?php
 
-class Boissons_metods
+class Boissons_methods
 {
     public array $boissons = [];
 
