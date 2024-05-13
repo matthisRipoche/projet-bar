@@ -16,7 +16,13 @@ class Commandes_methods
     private function FormProcess()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $this->AddCommande();
         }
+    }
+
+    private function AddCommande()
+    {
+        dd($this->objetBoissons);
     }
 
     private function InitCommandes()
