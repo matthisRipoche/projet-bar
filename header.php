@@ -10,5 +10,15 @@
 
 <body>
     <header class="site-header">
-        <h1>GESTIONNAIRE DE BAR</h1>
+        <div class="wrapper">
+            <div class="content">
+                <h1>GESTIONNAIRE DE BAR</h1>
+                <ul class="nav_links">
+                    <li><a class="link" href="/projet-bar">Retour accueil</a></li>
+                    <li><a class="link" href="?nav=1">Gérer les boissons</a></li>
+                    <li><a class="link" href="?nav=2">Gérer les tables</a></li>
+                    <li><a class="link" href="?nav=3">Gérer les commandes</a></li>
+                </ul>
+            </div>
+        </div>
     </header>

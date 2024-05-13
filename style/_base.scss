@@ -1,7 +1,7 @@
 body {
     font-family: "Courier New", Courier, monospace;
 
-    background: var(--background);
+    background: $dark;
     margin: 0;
     padding: 0;
 }
@@ -14,7 +14,13 @@ h1 {
     padding: 20px 0;
     margin: 0;
 
-    color: var(--yellow);
+    color: $yellow;
+}
+
+.wrapper {
+    max-width: calc(100% - 100px);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn {
@@ -24,9 +30,9 @@ h1 {
     width: 200px;
     height: 50px;
 
-    border: 1px solid var(--yellow);
-    background: var(--dark);
-    color: var(--yellow);
+    border: 1px solid $yellow;
+    background: $dark;
+    color: $yellow;
 
     scale: 1;
     transition: all 0.3s ease-in-out;

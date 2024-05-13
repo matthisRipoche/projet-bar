@@ -1,6 +1,6 @@
 body {
   font-family: "Courier New", Courier, monospace;
-  background: var(--background);
+  background: #0f0f0f;
   margin: 0;
   padding: 0;
 }
@@ -12,7 +12,13 @@ a {
 h1 {
   padding: 20px 0;
   margin: 0;
-  color: var(--yellow);
+  color: #ffdd1c;
+}
+
+.wrapper {
+  max-width: calc(100% - 100px);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn {
@@ -21,9 +27,9 @@ h1 {
   align-items: center;
   width: 200px;
   height: 50px;
-  border: 1px solid var(--yellow);
-  background: var(--dark);
-  color: var(--yellow);
+  border: 1px solid #ffdd1c;
+  background: #0f0f0f;
+  color: #ffdd1c;
   scale: 1;
   transition: all 0.3s ease-in-out;
 }
@@ -33,19 +39,28 @@ h1 {
 }
 
 .site-header {
-  background: var(--dark);
-  text-align: center;
-  color: var(--yellow);
+  border-radius: 10px;
 }
-
-/* import fichier de section */
-.sct-options {
-  margin-top: 20px;
+.site-header .wrapper {
+  border-radius: 20px;
+  background: #1f1f1f;
+  color: #ffdd1c;
 }
-.sct-options .wrapper {
+.site-header .wrapper .content {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 50px;
+}
+.site-header .wrapper .content .nav_links {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+.site-header .wrapper .content .nav_links li a {
+  color: #ffdd1c;
+  font-size: 20px;
 }
 
 /* import fichier de page */

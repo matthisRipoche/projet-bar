@@ -9,7 +9,6 @@ include_once('header.php');
 
 <main class="site-main">
     <?php
-    include_once('templates/parts/options.php');
 
     if (isset($_GET['nav'])) {
         switch ($_GET['nav']) {
