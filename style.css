@@ -1,15 +1,158 @@
-@import url('style/variables.css');
-@import url('style/base.css');
-@import url('style/header.css');
+body {
+  font-family: "Courier New", Courier, monospace;
+  background: var(--background);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  padding: 20px 0;
+  margin: 0;
+  color: var(--yellow);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  border: 1px solid var(--yellow);
+  background: var(--dark);
+  color: var(--yellow);
+  scale: 1;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  scale: 0.95;
+  cursor: pointer;
+}
+
+.site-header {
+  background: var(--dark);
+  text-align: center;
+  color: var(--yellow);
+}
 
 /* import fichier de section */
-@import url('style/sct/sct-options.css');
-
+.sct-options {
+  margin-top: 20px;
+}
+.sct-options .wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
 /* import fichier de page */
-@import url('style/page-boisson.css');
-@import url('style/page-commande.css');
-@import url('style/page-table.css');
+.page-boisson {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-boisson form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.page-boisson label {
+  font-size: 20px;
+  color: #ffdd1c;
+}
+.page-boisson .inputs {
+  margin-bottom: 30px;
+}
+.page-boisson .inputs .input {
+  width: 30%;
+  height: 50px;
+  line-height: 40px;
+  font-size: 36px;
+}
+.page-boisson .inputs .input-suppr {
+  width: 100%;
+  height: 50px;
+  line-height: 40px;
+  font-size: 36px;
+}
+.page-boisson .show-data {
+  margin-top: 50px;
+  width: calc(100% - 40px);
+}
+.page-boisson .show-data table {
+  border: 1px solid #ffdd1c;
+  color: #ffdd1c;
+  width: 100%;
+}
+.page-boisson .show-data table caption {
+  color: #ffdd1c;
+  margin-bottom: 20px;
+}
+.page-boisson .show-data table td {
+  width: 20%;
+}
+.page-boisson .show-data table td form {
+  margin: 0;
+}
+.page-boisson .show-data table .prix {
+  text-align: end;
+}
 
+.page-commandes {
+  max-width: calc(100% - 40px);
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-commandes .input {
+  width: 100%;
+  height: 50px;
+}
+.page-commandes .create-commande .liste-boisson {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+}
 
-@import url('style/footer.css');
+.page-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-table form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-table label {
+  font-size: 20px;
+  color: #ffdd1c;
+}
+.page-table .inputs {
+  margin-bottom: 30px;
+}
+.page-table .inputs .input {
+  width: 30%;
+  height: 50px;
+  line-height: 40px;
+  font-size: 36px;
+}
+.page-table .show-data {
+  margin-top: 50px;
+  width: calc(100% - 40px);
+}
+.page-table .show-data table {
+  border: 1px solid #ffdd1c;
+  color: #ffdd1c;
+  width: 100%;
+}
+.page-table .show-data table caption {
+  color: #ffdd1c;
+}
+.page-table .show-data table td {
+  width: 33%;
+}/*# sourceMappingURL=style.css.map */

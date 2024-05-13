@@ -4,7 +4,6 @@ class Commandes_methods
 {
     public array $commandes = [];
     private $objetBoissons;
-    private $current;
 
     public function __construct($objetBoissons)
     {

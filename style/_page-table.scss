@@ -1,0 +1,46 @@
+.page-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    label {
+        font-size: 20px;
+        color: $yellow;
+    }
+
+    .inputs {
+        margin-bottom: 30px;
+
+        .input {
+            width: 30%;
+            height: 50px;
+            line-height: 40px;
+            font-size: 36px;
+        }
+    }
+
+    .show-data {
+        margin-top: 50px;
+        width: calc(100% - 40px);
+
+        table {
+            border: 1px solid $yellow;
+            color: $yellow;
+            width: 100%;
+
+            caption {
+                color: $yellow;
+            }
+
+            td {
+                width: 33%;
+            }
+        }
+    }
+}
