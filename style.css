@@ -51,6 +51,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
+  margin-bottom: 20px;
   padding: 0 50px;
 }
 .site-header .wrapper .content .nav_links {
@@ -64,57 +65,78 @@ h1 {
 }
 
 /* import fichier de page */
-.page-boisson {
+.page-boisson h1 {
+  text-align: center;
+}
+.page-boisson .content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.page-boisson .content #boisson-create-edit {
+  background: #1f1f1f;
+  border-radius: 20px;
+  padding: 20px 50px;
+  width: 40%;
+}
+.page-boisson .content #boisson-create-edit form h2 label {
+  display: block;
+  text-align: center;
+  color: #ffdd1c;
+}
+.page-boisson .content #boisson-create-edit form .inputs {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 30px;
 }
-.page-boisson form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 30px;
-}
-.page-boisson label {
+.page-boisson .content #boisson-create-edit form .inputs .input {
+  width: 100%;
+  height: 50px;
+  background: #0f0f0f;
+  color: #ffdd1c;
   font-size: 20px;
+  border-color: #ffdd1c;
+}
+.page-boisson .content #boisson-create-edit form .inputs .description {
+  height: 200px;
+}
+.page-boisson .content #boisson-show-data {
+  width: 60%;
+}
+.page-boisson .content #boisson-show-data .boissons {
   color: #ffdd1c;
 }
-.page-boisson .inputs {
-  margin-bottom: 30px;
+.page-boisson .content #boisson-show-data .boissons .boisson {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  background: #1f1f1f;
+  border-radius: 20px;
+  padding: 0px 50px;
 }
-.page-boisson .inputs .input {
+.page-boisson .content #boisson-show-data .boissons .boisson .content {
+  display: flex;
+  align-items: center;
+}
+.page-boisson .content #boisson-show-data .boissons .boisson .content.textes {
+  width: 70%;
+  font-size: 20px;
+  justify-content: space-between;
+  color: #ffdd1c;
+}
+.page-boisson .content #boisson-show-data .boissons .boisson .content.bouttons {
   width: 30%;
-  height: 50px;
-  line-height: 40px;
-  font-size: 36px;
+  justify-content: center;
 }
-.page-boisson .inputs .input-suppr {
-  width: 100%;
-  height: 50px;
-  line-height: 40px;
-  font-size: 36px;
+.page-boisson .content #boisson-show-data .boissons .boisson .content.bouttons .btn-suppr {
+  background: red;
+  border: #ffffff 1px solid;
+  color: #ffffff;
 }
-.page-boisson .show-data {
-  margin-top: 50px;
-  width: calc(100% - 40px);
-}
-.page-boisson .show-data table {
-  border: 1px solid #ffdd1c;
+.page-boisson .content #boisson-show-data .boissons .boisson .content.bouttons .btn-edit {
+  background: #0f0f0f;
+  border: #ffdd1c 1px solid;
   color: #ffdd1c;
-  width: 100%;
-}
-.page-boisson .show-data table caption {
-  color: #ffdd1c;
-  margin-bottom: 20px;
-}
-.page-boisson .show-data table td {
-  width: 20%;
-}
-.page-boisson .show-data table td form {
-  margin: 0;
-}
-.page-boisson .show-data table .prix {
-  text-align: end;
 }
 
 .page-commandes {
