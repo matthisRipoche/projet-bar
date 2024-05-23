@@ -8,7 +8,6 @@
                 </li>
             <?php endforeach; ?>
         </ul>
-
         <input class="btn" type="submit" name="commande-create">
     </form>
 </section>
