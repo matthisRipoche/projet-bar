@@ -15,6 +15,10 @@ h1 {
   color: #ffdd1c;
 }
 
+ul {
+  list-style: none;
+}
+
 .wrapper {
   max-width: calc(100% - 100px);
   margin-left: auto;
@@ -34,6 +38,30 @@ h1 {
   transition: all 0.3s ease-in-out;
 }
 .btn:hover {
+  scale: 0.95;
+  cursor: pointer;
+}
+
+.btn-suppr {
+  background: red;
+  border: #ffffff 1px solid;
+  color: #ffffff;
+  scale: 1;
+  transition: all 0.07s ease-in-out;
+}
+.btn-suppr:hover {
+  scale: 0.95;
+  cursor: pointer;
+}
+
+.btn-edit {
+  background: #0f0f0f;
+  border: #ffdd1c 1px solid;
+  color: #ffdd1c;
+  scale: 1;
+  transition: all 0.07s ease-in-out;
+}
+.btn-edit:hover {
   scale: 0.95;
   cursor: pointer;
 }
@@ -128,31 +156,39 @@ h1 {
   width: 30%;
   justify-content: center;
 }
-.page-boisson .content #boisson-show-data .boissons .boisson .content.bouttons .btn-suppr {
-  background: red;
-  border: #ffffff 1px solid;
-  color: #ffffff;
-}
-.page-boisson .content #boisson-show-data .boissons .boisson .content.bouttons .btn-edit {
-  background: #0f0f0f;
-  border: #ffdd1c 1px solid;
-  color: #ffdd1c;
-}
 
 .page-commandes {
   max-width: calc(100% - 40px);
   margin-left: auto;
   margin-right: auto;
 }
-.page-commandes .input {
-  width: 100%;
-  height: 50px;
+.page-commandes h1 {
+  text-align: center;
 }
-.page-commandes .create-commande .liste-boisson {
+.page-commandes .content {
+  display: flex;
+  width: 100%;
+}
+.page-commandes .content #commande-create {
+  background: #1f1f1f;
+  border-radius: 20px;
+  padding: 20px 50px;
+  width: 40%;
+}
+.page-commandes .content #commande-create .liste-boisson .boisson {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  list-style: none;
+}
+.page-commandes .content #commande-create .liste-boisson .boisson .boisson-name {
+  font-size: 20px;
+  color: #ffdd1c;
+}
+.page-commandes .content #commande-create .liste-boisson .boisson .boisson-number {
+  height: 50px;
+  background: #0f0f0f;
+  color: #ffdd1c;
+  font-size: 20px;
+  border-color: #ffdd1c;
 }
 
 .page-table {

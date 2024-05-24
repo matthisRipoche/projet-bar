@@ -3,18 +3,41 @@
     margin-left: auto;
     margin-right: auto;
 
-    .input {
-        width: 100%;
-        height: 50px;
+    h1 {
+        text-align: center;
     }
 
-    .create-commande {
-        .liste-boisson {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+    .content {
+        display: flex;
+        width: 100%;
 
-            list-style: none;
+        #commande-create {
+            background: $background;
+            border-radius: 20px;
+            padding: 20px 50px;
+
+            width: 40%;
+
+            .liste-boisson {
+                .boisson {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .boisson-name {
+                        font-size: 20px;
+                        color: $yellow;
+                    }
+
+                    .boisson-number {
+                        height: 50px;
+                        background: $dark;
+                        color: $yellow;
+                        font-size: 20px;
+
+                        border-color: $yellow;
+                    }
+                }
+            }
         }
     }
 }

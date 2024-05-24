@@ -17,6 +17,10 @@ h1 {
     color: $yellow;
 }
 
+ul {
+    list-style: none;
+}
+
 .wrapper {
     max-width: calc(100% - 100px);
     margin-left: auto;
@@ -36,6 +40,32 @@ h1 {
 
     scale: 1;
     transition: all 0.3s ease-in-out;
+
+    &:hover {
+        scale: 0.95;
+        cursor: pointer;
+    }
+}
+.btn-suppr {
+    background: red;
+    border: $white 1px solid;
+    color: $white;
+
+    scale: 1;
+    transition: all 0.07s ease-in-out;
+
+    &:hover {
+        scale: 0.95;
+        cursor: pointer;
+    }
+}
+.btn-edit {
+    background: $dark;
+    border: $yellow 1px solid;
+    color: $yellow;
+
+    scale: 1;
+    transition: all 0.07s ease-in-out;
 
     &:hover {
         scale: 0.95;

@@ -10,10 +10,10 @@ class Commande
     public function __construct($id, $data)
     {
         $this->id = $id;
-        $this->listeBoisson = $data['listeBoisson'];
-        $this->prix = $data['prix'];
-        $this->date = $data['date'];
-        $this->paiment = $data['paiment'];
+        $this->listeBoisson = $data['listeBoisson'] ?? [];
+        $this->prix = $data['prix'] ?? 0;
+        $this->date = $data['date'] ?? date("d.m.y");
+        $this->paiment = $data['paiment'] ?? false;
     }
 
     //getters
@@ -91,7 +91,38 @@ class Commandes_methods
 
     private function AddCommande()
     {
-        //fonction d add de commandes
+        if (isset($_POST['commande-create'])) {
+
+            $commandeGen = [];
+            $prixTotal = 0;
+
+            $boissons = $this->objetBoissons->GetArrayBoissons();
+
+            foreach ($boissons as $boisson) {
+                if (isset($_POST['boissons-selected' . $boisson->getID()]) && !empty($_POST['boissons-selected' . $boisson->getID()])) {
+
+                    $commandeGen[$boisson->getID()] = [
+                        'name' => $boisson->getName(),
+                        'prix' => $boisson->getPrix(),
+                        'nombre' => $_POST['boissons-selected' . $boisson->getID()]
+                    ];
+
+                    $prixTotal += $boisson->getPrix() * $_POST['boissons-selected' . $boisson->getID()];
+                }
+            }
+
+            $newCommande = new Commande(
+                count($this->commandes),
+                [
+                    'listeBoisson' => $commandeGen,
+                    'prix' => $prixTotal,
+                    'date' => date("d.m.y"),
+                    'paiment' => false,
+                ]
+            );
+
+            $this->commandes[] = $newCommande;
+        }
     }
 
     private function InitCommandes()
@@ -120,5 +151,10 @@ class Commandes_methods
             ];
         }
         setcookie("commandes", json_encode($dataBrut), strtotime("+1 year"));
+    }
+
+    public function GetArrayCommandes()
+    {
+        return $this->commandes;
     }
 }

@@ -65,17 +65,6 @@
                         &.bouttons {
                             width: 30%;
                             justify-content: center;
-
-                            .btn-suppr {
-                                background: red;
-                                border: $white 1px solid;
-                                color: $white;
-                            }
-                            .btn-edit {
-                                background: $dark;
-                                border: $yellow 1px solid;
-                                color: $yellow;
-                            }
                         }
                     }
                 }

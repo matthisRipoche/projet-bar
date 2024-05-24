@@ -64,7 +64,7 @@ class Boissons_methods
     public function __construct()
     {
         $this->InitBoissons();
-        $this->formProcess();
+        $this->FormProcess();
         $this->SaveBoissons();
     }
 
@@ -149,12 +149,22 @@ class Boissons_methods
         setcookie("boissons", json_encode($dataBrut), strtotime("+1 year"));
     }
 
-    private function formProcess()
+    private function FormProcess()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $this->AddBoisson();
             $this->SupprBoisson();
             $this->EditBoisson();
         }
+    }
+
+    public function GetArrayBoissons()
+    {
+        return $this->boissons;
+    }
+
+    public function SetArrayBoissons($boissons)
+    {
+        $this->boissons = $boissons;
     }
 }
