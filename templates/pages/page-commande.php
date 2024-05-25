@@ -3,7 +3,11 @@
 
     <div class="content">
         <?php
-        include_once('templates/parts/commande/commande-create.php');
+        if (isset($_POST['commande-editID'])) :
+            include_once('templates/parts/commande/commande-edit.php');
+        else :
+            include_once('templates/parts/commande/commande-create.php');
+        endif;
         include_once('templates/parts/commande/commande-show-data.php');
         ?>
     </div>

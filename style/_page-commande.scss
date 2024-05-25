@@ -11,12 +11,18 @@
         display: flex;
         width: 100%;
 
-        #commande-create {
+        #commande-create,
+        #commande-edit {
             background: $background;
             border-radius: 20px;
             padding: 20px 50px;
 
             width: 40%;
+
+            h2 {
+                color: $yellow;
+                text-align: center;
+            }
 
             .liste-boisson {
                 .boisson {
@@ -35,6 +41,39 @@
                         font-size: 20px;
 
                         border-color: $yellow;
+                    }
+                }
+            }
+        }
+
+        #commande-show-data {
+            margin-left: 10px;
+            width: 60%;
+
+            .commandes {
+                color: $yellow;
+                .commande {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 10px 0;
+                    background: $background;
+                    border-radius: 20px;
+                    padding: 0px 50px;
+                    .content {
+                        display: flex;
+                        align-items: center;
+
+                        &.textes {
+                            width: 70%;
+                            font-size: 20px;
+                            justify-content: space-between;
+                            color: $yellow;
+                        }
+                        &.bouttons {
+                            width: 30%;
+                            justify-content: center;
+                            gap: 20px;
+                        }
                     }
                 }
             }

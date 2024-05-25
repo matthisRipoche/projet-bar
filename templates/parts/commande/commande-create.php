@@ -1,4 +1,5 @@
 <section id="commande-create">
+    <h2>Commande Create</h2>
     <form action="" method="post" class="create-commande">
         <ul class="liste-boisson">
             <?php foreach ($objetBoissons->boissons as $boisson) : ?>

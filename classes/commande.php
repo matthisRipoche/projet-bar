@@ -86,6 +86,7 @@ class Commandes_methods
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $this->AddCommande();
+            $this->EditCommande();
         }
     }
 
@@ -122,6 +123,16 @@ class Commandes_methods
             );
 
             $this->commandes[] = $newCommande;
+        }
+    }
+
+    private function EditCommande()
+    {
+        if (isset($_POST["commande-edit"])) {
+            foreach ($this->commandes as $commande) {
+                if ($commande->getID() == $_POST['commande-sameID']) {
+                }
+            }
         }
     }
 

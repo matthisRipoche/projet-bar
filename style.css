@@ -169,26 +169,65 @@ ul {
   display: flex;
   width: 100%;
 }
-.page-commandes .content #commande-create {
+.page-commandes .content #commande-create,
+.page-commandes .content #commande-edit {
   background: #1f1f1f;
   border-radius: 20px;
   padding: 20px 50px;
   width: 40%;
 }
-.page-commandes .content #commande-create .liste-boisson .boisson {
+.page-commandes .content #commande-create h2,
+.page-commandes .content #commande-edit h2 {
+  color: #ffdd1c;
+  text-align: center;
+}
+.page-commandes .content #commande-create .liste-boisson .boisson,
+.page-commandes .content #commande-edit .liste-boisson .boisson {
   display: flex;
   justify-content: space-between;
 }
-.page-commandes .content #commande-create .liste-boisson .boisson .boisson-name {
+.page-commandes .content #commande-create .liste-boisson .boisson .boisson-name,
+.page-commandes .content #commande-edit .liste-boisson .boisson .boisson-name {
   font-size: 20px;
   color: #ffdd1c;
 }
-.page-commandes .content #commande-create .liste-boisson .boisson .boisson-number {
+.page-commandes .content #commande-create .liste-boisson .boisson .boisson-number,
+.page-commandes .content #commande-edit .liste-boisson .boisson .boisson-number {
   height: 50px;
   background: #0f0f0f;
   color: #ffdd1c;
   font-size: 20px;
   border-color: #ffdd1c;
+}
+.page-commandes .content #commande-show-data {
+  margin-left: 10px;
+  width: 60%;
+}
+.page-commandes .content #commande-show-data .commandes {
+  color: #ffdd1c;
+}
+.page-commandes .content #commande-show-data .commandes .commande {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  background: #1f1f1f;
+  border-radius: 20px;
+  padding: 0px 50px;
+}
+.page-commandes .content #commande-show-data .commandes .commande .content {
+  display: flex;
+  align-items: center;
+}
+.page-commandes .content #commande-show-data .commandes .commande .content.textes {
+  width: 70%;
+  font-size: 20px;
+  justify-content: space-between;
+  color: #ffdd1c;
+}
+.page-commandes .content #commande-show-data .commandes .commande .content.bouttons {
+  width: 30%;
+  justify-content: center;
+  gap: 20px;
 }
 
 .page-table {
