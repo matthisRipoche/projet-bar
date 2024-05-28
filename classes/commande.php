@@ -87,6 +87,7 @@ class Commandes_methods
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $this->AddCommande();
             $this->EditCommande();
+            $this->SupprCommande();
         }
     }
 
@@ -132,6 +133,25 @@ class Commandes_methods
             foreach ($this->commandes as $commande) {
                 if ($commande->getID() == $_POST['commande-sameID']) {
                 }
+            }
+        }
+    }
+
+    private function SupprCommande()
+    {
+        if (isset($_POST["commande-supprID"])) {
+            foreach ($this->commandes as $index => $commande) {
+                if ($commande->getID() == $_POST['commande-supprID']) {
+                    unset($this->commandes[$index]);
+                }
+            }
+            foreach ($this->commandes as $commande) {
+                $newCommandes[] = $commande;
+            }
+            if (!empty($newCommandes)) {
+                $this->commandes = $newCommandes;
+            } else {
+                $commande = [];
             }
         }
     }

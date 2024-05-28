@@ -29,12 +29,11 @@
                     </div>
                     <div class="content bouttons">
                         <form action="" method="post">
-                            <input type="hidden" name="supprID" value="<?php echo $commande->getID(); ?>">
+                            <input type="hidden" name="commande-supprID" value="<?php echo $commande->getID(); ?>">
                             <input class="btn-suppr" type="submit" value="Suppr">
                         </form>
                         <form action="" method="post">
-                            <input type="hidden" name="editListeBoisson" value="<?php echo $commande->getID(); ?>">
-                            <input type="hidden" name="editPrix" value="<?php echo $commande->getPrix(); ?>">
+                            <input type="hidden" name="commande-editListeBoisson" value="<?php echo $commande->getID(); ?>">
                             <input class="btn-edit" type="submit" value="Edit">
                         </form>
                     </div>

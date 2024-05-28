@@ -1,6 +1,6 @@
 <section id="commande-create-edit">
-    <h2>Commande Create</h2>
-    <form action="" method="post" class="create-edit-commande">
+    <h2>Commande Edit</h2>
+    <form action="" method="post">
         <ul class="liste-boisson">
             <?php foreach ($objetBoissons->boissons as $boisson) : ?>
                 <li class="boisson">
@@ -9,6 +9,6 @@
                 </li>
             <?php endforeach; ?>
         </ul>
-        <input class="btn" type="submit" name="commande-edit">
+        <input class="btn" type="submit" name="commande-editID">
     </form>
 </section>
