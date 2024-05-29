@@ -17,7 +17,6 @@
                     if ($commande->getID() == $_POST['commande-editListeBoisson']) {
 
                         $listeBoissonEdit = $commande->getListeBoisson();
-                        dump($listeBoissonEdit);
 
                         break;
                     }
