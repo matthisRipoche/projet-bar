@@ -85,6 +85,7 @@ class Commandes_methods
     private function FormProcess()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            dump($_POST);
             $this->AddCommande();
             $this->EditCommande();
             $this->SupprCommande();
@@ -119,7 +120,7 @@ class Commandes_methods
                     'listeBoisson' => $commandeGen,
                     'prix' => $prixTotal,
                     'date' => date("d.m.y"),
-                    'paiment' => false,
+                    'paiment' => false
                 ]
             );
 
@@ -129,12 +130,6 @@ class Commandes_methods
 
     private function EditCommande()
     {
-        if (isset($_POST["commande-edit"])) {
-            foreach ($this->commandes as $commande) {
-                if ($commande->getID() == $_POST['commande-sameID']) {
-                }
-            }
-        }
     }
 
     private function SupprCommande()
