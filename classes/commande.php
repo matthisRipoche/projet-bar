@@ -80,12 +80,16 @@ class Commandes_methods
         $this->InitCommandes();
         $this->FormProcess();
         $this->SaveCommandes();
+
+        foreach ($this->commandes as $commande) {
+            dump("ok");
+            $commande->setListeBoisson($this->UpdateCommande($commande));
+        }
     }
 
     private function FormProcess()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            dump($_POST);
             $this->AddCommande();
             $this->EditCommande();
             $this->SupprCommande();
@@ -130,6 +134,26 @@ class Commandes_methods
 
     private function EditCommande()
     {
+        if (isset($_POST['commande-editID'])) {
+            //Construire la nouvelle liste de boissons
+            $newListeBoissons = [];
+            foreach ($this->objetBoissons->GetArrayBoissons() as $boisson) {
+                if (isset($_POST['new-boissons-selected' . $boisson->getID()])) {
+                    $newListeBoissons[$boisson->getID()] = [
+                        'name' => $boisson->getName(),
+                        'prix' => $boisson->getPrix(),
+                        'nombre' => $_POST['new-boissons-selected' . $boisson->getID()]
+                    ];
+                }
+            }
+
+            foreach ($this->commandes as $commande) {
+                if ($commande->getID() == $_POST['commandeEditID']) {
+                    $commande->setListeBoisson($newListeBoissons);
+                    $commande->setPrix($this->UpdatePrix($commande));
+                }
+            }
+        }
     }
 
     private function SupprCommande()
@@ -182,5 +206,31 @@ class Commandes_methods
     public function GetArrayCommandes()
     {
         return $this->commandes;
+    }
+
+    private function UpdatePrix($commande)
+    {
+        $prixTotal = 0;
+
+        foreach ($commande->getListeBoisson() as $boisson) {
+            $prixTotal += $boisson['prix'] * $boisson['nombre'];
+        }
+        return $prixTotal;
+    }
+
+    private function UpdateCommande($commande)
+    {
+        foreach ($this->objetBoissons->GetArrayBoissons() as $boissonDispo) {
+            foreach ($commande->getListeBoisson() as $id => $boissonPredef) {
+                if ($boissonDispo->getID() != $id) {
+                    $commande->getListeBoisson()[$boissonDispo->getID()] = [
+                        'name' => $boissonDispo->getName(),
+                        'prix' => $boissonDispo->getPrix(),
+                        'nombre' => 0
+                    ];
+                }
+            }
+        }
+        return $commande->getListeBoisson();
     }
 }
