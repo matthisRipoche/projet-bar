@@ -163,9 +163,10 @@ ul {
 }
 .page-boisson .content #boisson-show-data .boissons .boisson_global .boisson_description {
   display: none;
+  padding-bottom: 10px;
 }
 .page-boisson .content #boisson-show-data .boissons .boisson_global .boisson_description.active {
-  display: block;
+  display: block !important;
 }
 
 .page-commandes {

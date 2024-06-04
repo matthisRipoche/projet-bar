@@ -77,8 +77,9 @@
 
                     .boisson_description {
                         display: none;
+                        padding-bottom: 10px;
                         &.active {
-                            display: block;
+                            display: block !important;
                         }
                     }
                 }
