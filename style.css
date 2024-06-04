@@ -134,27 +134,38 @@ ul {
 .page-boisson .content #boisson-show-data .boissons {
   color: #ffdd1c;
 }
-.page-boisson .content #boisson-show-data .boissons .boisson {
+.page-boisson .content #boisson-show-data .boissons .boisson_global {
   display: flex;
-  justify-content: space-between;
-  margin: 10px 0;
+  flex-direction: column;
   background: #1f1f1f;
   border-radius: 20px;
   padding: 0px 50px;
+  margin: 10px 0;
+  cursor: pointer;
 }
-.page-boisson .content #boisson-show-data .boissons .boisson .content {
+.page-boisson .content #boisson-show-data .boissons .boisson_global .boisson_infos {
+  display: flex;
+  justify-content: space-between;
+}
+.page-boisson .content #boisson-show-data .boissons .boisson_global .boisson_infos .content {
   display: flex;
   align-items: center;
 }
-.page-boisson .content #boisson-show-data .boissons .boisson .content.textes {
+.page-boisson .content #boisson-show-data .boissons .boisson_global .boisson_infos .content.textes {
   width: 70%;
   font-size: 20px;
   justify-content: space-between;
   color: #ffdd1c;
 }
-.page-boisson .content #boisson-show-data .boissons .boisson .content.bouttons {
+.page-boisson .content #boisson-show-data .boissons .boisson_global .boisson_infos .content.bouttons {
   width: 30%;
   justify-content: center;
+}
+.page-boisson .content #boisson-show-data .boissons .boisson_global .boisson_description {
+  display: none;
+}
+.page-boisson .content #boisson-show-data .boissons .boisson_global .boisson_description.active {
+  display: block;
 }
 
 .page-commandes {

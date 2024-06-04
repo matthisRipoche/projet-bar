@@ -45,26 +45,40 @@
 
             .boissons {
                 color: $yellow;
-                .boisson {
+                .boisson_global {
                     display: flex;
-                    justify-content: space-between;
-                    margin: 10px 0;
+                    flex-direction: column;
+
                     background: $background;
                     border-radius: 20px;
                     padding: 0px 50px;
-                    .content {
-                        display: flex;
-                        align-items: center;
+                    margin: 10px 0;
 
-                        &.textes {
-                            width: 70%;
-                            font-size: 20px;
-                            justify-content: space-between;
-                            color: $yellow;
+                    cursor: pointer;
+                    .boisson_infos {
+                        display: flex;
+                        justify-content: space-between;
+                        .content {
+                            display: flex;
+                            align-items: center;
+
+                            &.textes {
+                                width: 70%;
+                                font-size: 20px;
+                                justify-content: space-between;
+                                color: $yellow;
+                            }
+                            &.bouttons {
+                                width: 30%;
+                                justify-content: center;
+                            }
                         }
-                        &.bouttons {
-                            width: 30%;
-                            justify-content: center;
+                    }
+
+                    .boisson_description {
+                        display: none;
+                        &.active {
+                            display: block;
                         }
                     }
                 }
