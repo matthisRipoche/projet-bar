@@ -80,11 +80,6 @@ class Commandes_methods
         $this->InitCommandes();
         $this->FormProcess();
         $this->SaveCommandes();
-
-        foreach ($this->commandes as $commande) {
-            dump("ok");
-            $commande->setListeBoisson($this->UpdateCommande($commande));
-        }
     }
 
     private function FormProcess()
@@ -218,19 +213,26 @@ class Commandes_methods
         return $prixTotal;
     }
 
-    private function UpdateCommande($commande)
+    public function UpdateCommande($commande)
+
     {
-        foreach ($this->objetBoissons->GetArrayBoissons() as $boissonDispo) {
-            foreach ($commande->getListeBoisson() as $id => $boissonPredef) {
-                if ($boissonDispo->getID() != $id) {
-                    $commande->getListeBoisson()[$boissonDispo->getID()] = [
-                        'name' => $boissonDispo->getName(),
-                        'prix' => $boissonDispo->getPrix(),
-                        'nombre' => 0
-                    ];
-                }
+
+        $boissonsDispo = $this->objetBoissons->GetArrayBoissons();
+        $boissonsCommande = $commande->getListeBoisson();
+
+        foreach ($boissonsDispo as $boissonDispo) {
+            if (!isset($boissonsCommande[$boissonDispo->getID()])) {
+                $boissonsCommande[$boissonDispo->getID()] = [
+                    'name' => $boissonDispo->getName(),
+                    'prix' => $boissonDispo->getPrix(),
+                    'nombre' => 0
+                ];
+                dump($boissonDispo->getID());
+                dump($boissonsCommande[$boissonDispo->getID()]);
             }
         }
-        return $commande->getListeBoisson();
+
+        $commande->setListeBoisson($boissonsCommande);
+        return $boissonsCommande;
     }
 }

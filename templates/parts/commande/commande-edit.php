@@ -14,8 +14,7 @@
 
                     //Boucler sur la liste de boissons de la commande
 
-
-
+                    $commande->setListeBoisson($objetCommandes->UpdateCommande($commande));
                     foreach ($commande->getListeBoisson() as $id => $boisson) :
                         if (in_array($id, $tabIdPossible)) :
             ?>
